@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sommerloch-Short Strategie</title>
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #b8860b;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+        }
+        p, li {
+            margin: 8px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ul ul {
+            list-style-type: circle;
+        }
+        a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Sommerloch-Short</h1>
+
+<h2>📈 08:00 Einstiegssignal (EQ-Trading) – Sommerloch-Short:</h2>
+<p>Shorte den DAX im Mai, Juni, Juli, August und September zwischen dem 20. und dem 24. des Monats.<br>
+Das Intervall wird jeweils verkürzt bei Wochenenden oder Feiertagen.<br>
+Einstieg Short am 20. um 9:00 Uhr, Ausstieg am 24. um 17:30 Uhr.</p>
+
+<h2>📉 15:00 Ausstiegssignal (EQ-Trading) – Sommerloch-Short:</h2>
+<p>Schließe am 24. die Short-Position im DAX bis 17:30 Uhr.<br>
+Das Intervall wird jeweils verkürzt bei Wochenenden oder Feiertagen.</p>
+
+<h2>🛠️ Optimieren</h2>
+<p><em>Taktische Anpassungen und Filter zur Verbesserung der Strategiequalität und Risikokontrolle.</em></p>
+<ul>
+    <li>Filtern mit der 3-Daumen-Regel.<br>Beispiel: Sind im DAX alle drei Daumen positiv, kann ein Einstieg vermieden werden.</li>
+    <li>Selten, aber wenn zwei kurzfristige Strategien (wie SLS und TT) gleichzeitig gegensätzliche Signale liefern, ist es sinnvoll, keine Position einzugehen, statt sich für eine Richtung zu entscheiden.<br>Das vermeidet unnötiges Risiko und Unsicherheit in einem widersprüchlichen Marktumfeld.<br>Zum Einstiegstermin von SLS sollte geprüft werden, ob TT möglicherweise ein Signal liefert, dann neutral bleiben oder nicht liefert, dann handeln.</li>
+    <li>Wenn TT und SLS gleichzeitig Signale liefern, kann man auch warten und nach Ende von TT in SLS einsteigen.</li>
+    <li>Stop-Loss und Take-Profit definieren, um das Risiko besser zu kontrollieren.<br>Beispiel: SL = 1,5 %; TP = 2,5 %</li>
+    <li>Volatilität berücksichtigen:<br>In Wochen mit niedrigem VIX oder VDAX kann der Effekt schwächer sein, in Wochen mit hoher impliziter Volatilität ist eine stärkere Reaktion möglich.</li>
+    <li>Strategie könnte mit dem Kauf von Put Optionen noch weiter optimiert werden, weil nach dem Verfall häufig auch die Volatilität ansteigt</li>
+    <li>Open Interest analysieren:<br>Nur bei hohem Open Interest (insbesondere in den Call-Optionen) handeln.<br>Maximum-Pain-Niveau als zusätzliche Entscheidungsgrundlage verwenden.</li>
+    <li>Intraday-Timing verfeinern:<br>
+a) Nicht direkt zur Eröffnung shorten – zunächst 30–60 Minuten beobachten. Einstieg bei Bestätigung einer Intraday-Schwäche oder bearisher Umkehrkerze (z. B. Morning Break Out).<br>
+b) EUWAX Sentiment um 9:00 Uhr prüfen:<br>Über 0 → eventuell Long (z. B. bei gleichzeitigem TT-Signal), unter 0 → Short.</li>
+    <li>Saisonale Statistik als Filter nutzen: August und September gelten als besonders schwach.</li>
+    <li>Nur bei unterdurchschnittlicher Marktstärke handeln.<br>Beispiel: DAX unter 50-Tage-Linie → Short-Signal wahrscheinlicher.<br>Ergänzend mit gleitenden Durchschnitten oder Indikatoren kombinieren: RSI, MACD, Stochastic Oscillator, ROC oder Momentum-Indikator.</li>
+    <li>Volatile Strategie – daher maximal mit einem 2er-Hebel gewichten.</li>
+</ul>
+
+<h2>💡 Hinweise</h2>
+<p><em>Einsatzbereich, Timing-Regeln und strategische Zusatzfunktionen.</em></p>
+<ul>
+    <li>Strategie: <a href="https://www.andre-stagge.de/sommerloch-short/">https://www.andre-stagge.de/sommerloch-short/</a></li>
+    <li>Kann zur Absicherung eines Aktiendepots genutzt werden, wenn der Markt in dieser Zeit fällt.</li>
+    <li>Fällt der Verfallstag auf den 15. oder 16. des Monats, erfolgt der Einstieg trotzdem erst am 20.</li>
+    <li>Die Strategie ist ausschließlich auf den DAX ausgerichtet.</li>
+    <li>Sommerloch-Short und Turnaround Tuesday (TT) sind beide kurzfristige Strategien und werden im Algo gleichgewichtet umgesetzt.<br>Sind beide Signale gleichzeitig im DAX aktiv, neutralisieren sie sich weitgehend.</li>
+    <li>Will man nicht neutral bleiben, kann gelten: „Kurzfristige Strategie schlägt langfristige“ – also nur TT handeln, da TT kurzfristiger ist als SLS.</li>
+    <li>Der Sommerloch-Short kann auch bei drei positiven Daumen gültig sein. Die Umsetzung liegt in eigener Verantwortung.</li>
+    <li>Börsenplätze weltweit haben unterschiedliche Handelszeiten und Feiertagsregelungen. Handelszeiten, handelsfreie Tage und verkürzte Handelszeiten beachten.
+        <ul>
+            <li><a href="https://www.boerse-frankfurt.de/handeln/handelszeiten-und-kalender">https://www.boerse-frankfurt.de/handeln/handelszeiten-und-kalender</a></li>
+            <li><a href="https://www.nyse.com/markets/hours-calendars">https://www.nyse.com/markets/hours-calendars</a></li>
+        </ul>
+        Auch andere Märkte auf lokale Börsenzeiten prüfen – besonders rund um Feiertage und Wochenenden. Wichtig für Orderausführung, Liquidität und Risikosteuerung.</li>
+    <li>Diese Strategie wird in MT4-TC24, SMS-Signale, Algo-Investor, Scorecard, Digitaler Kalender berücksichtigt.</li>
+</ul>
+
+</body>
+</html>
